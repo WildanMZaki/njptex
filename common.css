@@ -31,12 +31,15 @@
 }
 
 .is-url {
-    color: #1c71ad;
-    text-decoration: none;
+    color: #b4cddf;
+    /* text-decoration: none;s */
+}
+.is-url:hover {
+    color: #d7e8f4;
 }
 
 .footer_section {
-    background-color: #88bde3;
+    background-color: #1c71ad;
 }
 
 .nav-link:hover {
