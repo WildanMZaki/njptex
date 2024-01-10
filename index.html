@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lomaju - Loker Cianjur Maju</title>
+    <link rel="shortcut icon" href="./assets/images/logo.jpg" type="image/x-icon">
+    <title>Njptex</title>
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/fonts/tabler-icons.css">
+    <link rel="stylesheet" href="./assets/fonts/materialdesignicons.css">
 
     <!-- Bootstrap -->
     <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,10 +23,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./assets/css/products.css">
     <style>
-        #profileBtnTop {
-            width: 30px;
-            height: 30px;
+        .offcanvas {
+            transition: transform 0.3s ease-in-out;
         }
     </style>
 
@@ -29,68 +34,237 @@
 </head>
 <body>
     
-    <header class="navbar navbar-dark bg-edark">
+    <header class="navbar navbar-light bg-light py-4 shadow-sm">
         <div class="container-fluid d-flex align-items-center">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="./assets/blogo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
-                <p class="d-inline m-0 p-0 ms-4">Lomaju</p>
+            <a class="navbar-brand d-flex align-items-center ms-lg-5 ms-md-4 ms-3" href="#">
+                <img src="./assets/images/logo.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <p class="d-inline m-0 p-0 ms-4 fw-bold">Njptex</p>
             </a>
-            <div class="align-items-center d-none d-lg-flex">
-                <div class="input-group" style="width: fit-content;">
-                    <input type="text" class="form-control" placeholder="Cari Lowongan">
-                    <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cari">
-                            <i class="bx bx-search-alt-2"></i>
-                        </button>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-warning ms-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter">
-                    <i class="bx bx-filter"></i>
-                </button>
-            </div>
-            <div class="me-2 d-flex align-items-center">
-                <div class="d-flex align-items-center me-lg-4 me-2 pointer position-relative">
+            <nav class="w-50 m-0 header-nav d-none d-lg-block d-md-block">
+                <ul class="d-flex list-unstyled ms-auto text-dark justify-content-around m-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark nav-link-header" aria-current="page" href="#home">
+                            <p class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center"><i class="ti ti-home me-1"></i> <span>Home</span></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark nav-link-header" href="#layanan">
+                            <p class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center"><i class="ti ti-shirt me-1"></i> Produk</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark nav-link-header" href="#jadwal-tarif">
+                            <p class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center"><i class="ti ti-building-store me-1"></i> About us</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark nav-link-header" href="#armada">
+                            <p class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center"><i class="ti ti-phone me-1"></i> Contact</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="me-2 d-flex align-items-center d-lg-none d-md-none d-block">
+                <!-- <div class="d-flex align-items-center me-lg-4 me-2 pointer position-relative">
                     <i class="bx bxs-bell text-white fs-4"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         9+
                         <span class="visually-hidden">unread notification</span>
                     </span>
-                </div>
-                <div class="d-lg-flex align-items-center me-2 pointer position-relative d-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                    <i class="bx bx-menu text-white fs-4"></i>                    
-                </div>
-                <!-- <div class="border border-white rounded-circle p-2 d-lg-flex justify-content-center align-items-center pointer d-none" id="profileBtnTop" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                    <i class="bx bxs-user text-white"></i>
                 </div> -->
+                <div class="align-items-center me-2 pointer position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <i class="bx bx-menu fs-4"></i>                    
+                </div>
             </div>
-        </div>
-        <div class="container-fluid mt-4 mb-2 d-flex align-items-center d-lg-none">
-            <div class="row g-0 ms-3">
-                <div class="col-10">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Cari Lowongan">
-                        <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button">
-                                <i class="bx bx-search-alt-2"></i>
-                            </button>
+        </div>        
+    </header>
+    
+    <main>
+        <section id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+            <!-- <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div> -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/images/slide1.webp" class="d-block w-100" alt="Slide 1">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                                        <h5>First slide label</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/slide2.webp" class="d-block w-100" alt="Slide 2">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                                        <h5>Second slide label</h5>
+                                        <p>Some representative placeholder content for the second slide.</p>
+                                    </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/slide3.webp" class="d-block w-100" alt="Slide 3">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                                        <h5>Third slide label</h5>
+                                        <p>Some representative placeholder content for the third slide.</p>
+                                    </div> -->
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+        
+        <!-- Start Products  -->
+        <div class="products-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title-all text-center">
+                            <h1>Top <span class="highlight">Products</span></h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-warning ms-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter">
-                        <i class="bx bx-filter"></i>
-                    </button>
+                
+        
+                <div class="row special-list">
+                    <div class="col-md-4 col-12 special-grid best-seller px-md-4">
+                        <div class="products-single fix row">
+                            <div class="box-img-hover col-6 col-md-12 p-0">
+                                <div class="type-lb">
+                                    <p class="sale">Hoodie</p>
+                                </div>
+                                <img src="https://img.freepik.com/premium-psd/man-black-hoodie-with-black-hoodie-it_176841-37255.jpg" class="img-fluid w-100" alt="Image">                                
+                            </div>
+                            <div class="why-text col-6 col-md-12">
+                                <h4 class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem voluptatem consequatur vel exercitationem!</h4>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 col-12 special-grid top-featured px-md-4">
+                        <div class="products-single fix row">
+                            <div class="why-text col-6 col-md-12 d-md-none d-block">
+                                <h4 class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem voluptatem consequatur
+                                    vel exercitationem!</h4>
+                            </div>
+                            <div class="box-img-hover col-6 col-md-12 p-0">
+                                <div class="type-lb">
+                                    <p class="new">T-Shirt</p>
+                                </div>
+                                <img src="https://m231.com/cdn/shop/products/31ef7a2ee7887a9d024b1e805d747d9b_800x.jpg?v=1639042342" class="img-fluid w-100" alt="Image">
+                            </div>
+                            <div class="why-text col-6 col-md-12 d-none d-lg-block">
+                                <h4 class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem voluptatem consequatur vel exercitationem!</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-12 special-grid top-featured px-md-4">
+                        <div class="products-single fix row">
+                            <div class="box-img-hover col-6 col-md-12 p-0">
+                                <div class="type-lb">
+                                    <p class="sale">Longsleeve</p>
+                                </div>
+                                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c1ded1a85a3f4cfea57aaea7007c8798_9366/Five_Ten_Long_Sleeve_Jersey_Black_HG1305_21_model.jpg" class="img-fluid w-100" alt="Image">
+                                
+                            </div>
+                            <div class="why-text col-6 col-md-12">
+                                <h4 class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem voluptatem consequatur vel exercitationem!</h4>
+                            </div>
+                        </div>
+                    </div>
+        
+                    
                 </div>
             </div>
-            
-            
         </div>
-    </header>
-    
-    <main class="container-fluid">
-        
-        
+        <!-- End Products  -->
 
+        <!--footer section start -->
+        
+        <div class="footer_section layout_padding3 py-4">        
+            <div class="container">                        
+                <div class="footer_section_2">    
+                    <div class="row">        
+                        <div class="col-lg-5 col-sm-6">        
+                            <h4 class="link_text">Ngptex Cianjur</h4>        
+                            <p class="footer_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione architecto eveniet, autem earum minima dolor? Beatae animi, eius, totam sit tempore necessitatibus distinctio provident et, odio quo maxime optio officia.</p>        
+                        </div>
+        
+                        <div class="col-lg-2 col-sm-6">        
+                            <h6 class="link_text">Menu</h6>        
+                            <div class="footer_menu">        
+                                <ul class="d-flex flex-lg-column justify-content-between list-unstyled">        
+                                    <li><a class="is-url" href="#beranda">Home</a></li>        
+                                    <li><a class="is-url" href="https://vetencode.com/tlayanan-kebijakan">Privacy Policy</a></li>
+                                    <li><a class="is-url" href="https://vetencode.com/tlayanan-syarat">Syarat & Ketentuan</a></li>        
+                                    <li>        
+                                        <a class="is-url" href="mailto:info@vetencode.com?subject=Saya%20ingin%20bertanya%20mengenai%20layanan%20Vetencode">        
+                                            Contact Us        
+                                        </a>        
+                                    </li>        
+                                </ul>        
+                            </div>        
+                        </div>
+        
+                        <div class="col-lg-2 col-sm-6">        
+                            <h4 class="link_text">Social Media</h4>         
+                            <div class="social_icon">        
+                                <ul class="list-unstyled d-flex justify-content-around">        
+                                    <li>        
+                                        <a href="https://www.facebook.com/people/Vetencode/100071363904803/">        
+                                            <img src="https://vetencode.com/assets/landing-page/images/fb-icon.png">        
+                                        </a>        
+                                    </li>        
+                                    <li>        
+                                        <a
+                                            href="https://www.instagram.com/vetencode_/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">        
+                                            <img src="https://vetencode.com/assets/landing-page/images/instagram-icon.png">        
+                                        </a>        
+                                    </li>
+                                    <li>        
+                                        <a href="https://wa.me/6282118354994">        
+                                            <img src="https://vetencode.com/assets/landing-page/images/whatsapp-icon.png">        
+                                        </a>    
+                                    </li>                    
+                                </ul>        
+                            </div>        
+                        </div>
+        
+                        <div class="col-lg-3 col-sm-6">        
+                            <h4 class="link_text">Hubungi Kami</h4>        
+                            <p class="footer_text_1">Jalan Arwinda, Gadung Permai, Blk. E No.61, Bojong, Karangtengah,        
+                                Kabupaten Cianjur, Jawa Barat 43281        
+                            </p>        
+                            <p class="footer_text_1">        
+                                <a  class="is-url" href="mailto:info@vetencode.com?subject=Saya%20ingin%20bertanya%20mengenai%20layanan%20Vetencode"
+                                    class="hoverCornsilk">        
+                                    info@greatcompany.com        
+                                </a>        
+                            </p>        
+                        </div>        
+                    </div>        
+                </div>        
+            </div>        
+        </div>        
+        <!--client section end -->
+        
+        <!--copyright section start -->        
+        <div class="copyright_section bg-light py-3 text-center">        
+            <div class="container">        
+                <p class="copyright_text">Copyright &copy; 2024 All Right Reserved By PT Vetencode Pradani Abadi        
+            </div>        
+        </div>        
+        <!--copyright section end -->
     </main>
 
     <aside class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -103,42 +277,34 @@
                 <nav class="d-flex flex-column">
                     <a href="#" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center pointer py-2 border-bottom mb-3">
-                            <i class="bx bx-home me-2 fs-4"></i>
+                            <i class="ti ti-home me-2 fs-4"></i>
                             <span class="fs-6">Home</span>
                         </div>
                     </a>
                     <a href="#" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center pointer py-2 border-bottom mb-3">
-                            <i class="bx bx-news me-2 fs-4"></i>
-                            <span class="fs-6">Explore</span>
+                            <i class="ti ti-shirt me-2 fs-4"></i>
+                            <span class="fs-6">Product</span>
                         </div>
                     </a>
                     <a href="#" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center pointer py-2 border-bottom mb-3">
-                            <i class="bx bx-bookmarks me-2 fs-4"></i>
-                            <span class="fs-6">Riwayat</span>
+                            <i class="ti ti-building-store me-2 fs-4"></i>
+                            <span class="fs-6">About us</span>
                         </div>
                     </a>
                     <a href="#" class="text-decoration-none text-dark">
                         <div class="d-flex align-items-center pointer py-2 border-bottom mb-3">
-                            <i class="bx bxs-user me-2 fs-4"></i>
-                            <span class="fs-6">Profile</span>
+                            <i class="ti ti-phone me-2 fs-4"></i>
+                            <span class="fs-6">Contact</span>
                         </div>
                     </a>
                 </nav>
-                <div>
-                    <a href="#" class="text-decoration-none text-dark">
-                        <div class="d-flex align-items-center pointer py-2 border-bottom mb-1">
-                            <i class="bx bx-log-out me-2 fs-4"></i>
-                            <span class="fs-6">Log out</span>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
     </aside>
 
-    <footer class="w-100 bg-edark ">
+    <!-- <footer class="w-100 bg-edark ">
         <nav class="w-100">
             <ul class="list-unstyled d-flex w-100 justify-content-around my-3">
                 <li class="active">
@@ -167,16 +333,18 @@
                 </li>
             </ul>
         </nav>
-    </footer>
+    </footer> -->
 
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
 
+        
 
     </script>
 </body>
