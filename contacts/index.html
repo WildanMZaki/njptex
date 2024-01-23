@@ -27,9 +27,22 @@
     
     <link rel="stylesheet" href="../common.css">
     <style>
-        .offcanvas {
-            transition: transform 0.3s ease-in-out;
+        #makemehavehight {
+            min-height: 260px;
         }
+        /* iframe {
+            width: 850px;
+        } */
+        @media (max-width: 770px) {
+            #makemehavehight {
+                min-height: 450px;
+            }            
+        }
+        /* @media (max-width: 660px) {
+            iframe {
+                width: 600px;
+            }
+        } */
     </style>
 
 
@@ -53,13 +66,43 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark nav-link-header" href="../products/">
+                    <li class="nav-item position-relative show-products">
+                        <a class="nav-link text-dark nav-link-header" href="javascript:void(0)">
                             <p
                                 class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
                                 <i class="ti ti-shirt me-1"></i> Produk
                             </p>
                         </a>
+                        <div class="position-absolute" style="z-index: 300;" id="products-options">
+                            <div class="card">
+                                <div class="card-body px-5">
+                                    <h5 class="m-0 p-0 mb-3 text-nowrap">Our Products</h5>
+                                    <hr class="m-0 pb-1">
+                                    <ul class="list-unstyled">
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="../products/" class="my-2 text-decoration-none text-dark">
+                                                Hoodie
+                                            </a>
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="../products/" class="my-2 text-decoration-none text-dark">
+                                                T-Shirt
+                                            </a>
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="../products/" class="my-2 text-decoration-none text-dark">
+                                                Longsleeve
+                                            </a>
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="../products/" class="my-2 text-decoration-none text-dark">
+                                                Outdoor
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark nav-link-header" href="../about/">
@@ -69,7 +112,7 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link active text-dark nav-link-header" href="#">
                             <p
                                 class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
@@ -80,13 +123,6 @@
                 </ul>
             </nav>
             <div class="me-2 d-flex align-items-center d-lg-none d-md-none d-block">
-                <!-- <div class="d-flex align-items-center me-lg-4 me-2 pointer position-relative">
-                    <i class="bx bxs-bell text-white fs-4"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        9+
-                        <span class="visually-hidden">unread notification</span>
-                    </span>
-                </div> -->
                 <div class="align-items-center me-2 pointer position-relative" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="bx bx-menu fs-4"></i>
@@ -96,7 +132,121 @@
     </header>
 
     <main>
+        <section class="w-100 py-5 bg-main text-white">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-lg-6 p-5 text-center text-md-start">
+                        <h2>Get in touch</h2>
+                        <p>Ingin mengenal kami lebih jauh? Berikut adalah beberapa cara untuk terhubung dengan kami</p>
+                    </div>
+                </div>
+            </d>
+        </section>
+        
+        <section class="container-lg">
+            <div class="row" id="makemehavehight"></div>
+            <div class="position-relative" id="contact-options">
+                <div class="position-absolute w-100" style="bottom: 80px;">
+                    <div class="row w-100 mx-0">
+                        <div class="col-md-6 d-flex mb-3 mb-md-0">
+                            <div class="card shadow-lg flex-fill">
+                                <div class="card-body text-center">
+                                    <i class="ti ti-phone-call fw-bolder fs-1"></i>
+                                    <h6 class="fw-bold">Contact Info</h6>
+                                    <div class="my-3">
+                                        <span>Tertarik untuk menghubungi kami lebih lanjut?</span>
+                                        <br>
+                                        <span>Kami siap mendengar aspirasi Anda</span>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <a href="wa.me/621234567890" class="text-decoration-none">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="ti ti-brand-whatsapp"></i> Hubungi Kami
+                                            </button>
+                                        </a>
+                                        <small class="pointer fw-bold">+62 1234 5678 90</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <div class="card shadow-lg flex-fill">
+                                <div class="card-body text-center">
+                                    <i class="ti ti-social fw-bolder fs-1"></i>
+                                    <h6 class="fw-bold">Social Media</h6>
+                                    <div class="my-3">
+                                        <span>Ingin mendapat informasi terbaru?</span>
+                                        <br>
+                                        <span>Silahkan ikuti berbagai sosial media kami</span>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="#" class="text-decoration-none">
+                                            <i class="ti ti-brand-instagram fs-1"></i>
+                                        </a>
+                                        <a href="#" class="text-decoration-none">
+                                            <i class="ti ti-brand-tiktok fs-1"></i>
+                                        </a>
+                                        <a href="#" class="text-decoration-none">
+                                            <i class="ti ti-brand-facebook fs-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="container mb-5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>Our <span class="highlight">Location</span></h1>
+                        <p>Anda juga dapat mampir ke toko kami yang terletak pada lokasi berikut</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mx-0">
+                <div class="card p-0">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-8 col-12">
+                                <iframe
+                                    class="w-100"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3954244528913!2d107.54259517035082!3d-6.962593352757964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68efa9e6275357%3A0x8b947ff54634055f!2sNJ%20PROJECT%20CONVECTION!5e0!3m2!1sid!2sid!4v1704939246460!5m2!1sid!2sid"
+                                    height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="col-lg-4 px-4 py-3 d-flex flex-column justify-content-between">
+                                <div class="iamtop">
+                                    <div class="mb-3">
+                                        <h5>Cianjur</h5>
+                                        <small>Jl. Aria Wiratanudatar, Desa Sindanglaka, Kecamatan Karangtengah, Cianjur, Jawa Barat 43434</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6>Phone / Fax</h6>
+                                        <p>+62 123 4567 8900 - Contact 1</p>
+                                        <p>+62 123 4567 8900 - Contact 2</p>
+                                    </div>
+                                    <div>
+                                        <h6>Fax: +62123123</h6>
+                                    </div>
+                                </div>
+                                <div class="iambottom d-flex justify-content-end justify-content-md-start">
+                                    <a href="https://maps.google.com/maps?ll=-6.962599,107.547209&z=16&t=m&hl=id&gl=ID&mapclient=embed&cid=10057804559246689631">
+                                        <button type="button" class="btn btn-primary">
+                                            <i class="ti ti-map-pin"></i> Buka di Maps
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Start Footer  -->
@@ -143,7 +293,7 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
                             <div class="d-flex">
-                                <img src="./assets/images/logo.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top me-2">
+                                <img src="../assets/images/logo.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top me-2">
                                 <h4 class="w-100">About Njptex</h4>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 

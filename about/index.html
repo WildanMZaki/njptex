@@ -40,53 +40,72 @@
     <header class="navbar navbar-light bg-light py-4 shadow-sm">
         <div class="container-fluid d-flex align-items-center">
             <a class="navbar-brand d-flex align-items-center ms-lg-5 ms-md-4 ms-3" href="#">
-                <img src="../assets/images/logo.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <img src="./assets/images/logo.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top">
                 <p class="d-inline m-0 p-0 ms-4 fw-bold">Njptex</p>
             </a>
             <nav class="w-50 m-0 header-nav d-none d-lg-block d-md-block">
                 <ul class="d-flex list-unstyled ms-auto text-dark justify-content-around m-0">
                     <li class="nav-item">
-                        <a class="nav-link text-dark nav-link-header" aria-current="page" href="../">
+                        <a class="nav-link active text-dark nav-link-header" aria-current="page" href="#">
                             <p
                                 class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
-                                <i class="ti ti-home me-1"></i> <span>Home</span>
-                            </p>
+                                <i class="ti ti-home me-1"></i> <span>Home</span></p>
+                        </a>
+                    </li>
+                    <li class="nav-item position-relative show-products">
+                        <a class="nav-link text-dark nav-link-header" href="javascript:void(0)">
+                            <p
+                                class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
+                                <i class="ti ti-shirt me-1"></i> Produk</p>
+                        </a>
+                        <div class="position-absolute" style="z-index: 300;" id="products-options">
+                            <div class="card">
+                                <div class="card-body px-5">
+                                    <h5 class="m-0 p-0 mb-3 text-nowrap">Our Products</h5>
+                                    <hr class="m-0 pb-1">
+                                    <ul class="list-unstyled">
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="./products/" class="my-2 text-decoration-none text-dark">
+                                                Hoodie
+                                            </a>
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="./products/" class="my-2 text-decoration-none text-dark">
+                                                T-Shirt
+                                            </a>
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="./products/" class="my-2 text-decoration-none text-dark">
+                                                Longsleeve
+                                            </a>
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="./products/" class="my-2 text-decoration-none text-dark">
+                                                Outdoor
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark nav-link-header" href="./about/">
+                            <p
+                                class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
+                                <i class="ti ti-building-store me-1"></i> About us</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark nav-link-header" href="../products/">
+                        <a class="nav-link text-dark nav-link-header" href="./contacts/">
                             <p
                                 class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
-                                <i class="ti ti-shirt me-1"></i> Produk
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-dark nav-link-header" href="#">
-                            <p
-                                class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
-                                <i class="ti ti-building-store me-1"></i> About us
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark nav-link-header" href="../contacts/">
-                            <p
-                                class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
-                                <i class="ti ti-phone me-1"></i> Contact
-                            </p>
+                                <i class="ti ti-phone me-1"></i> Contact</p>
                         </a>
                     </li>
                 </ul>
             </nav>
             <div class="me-2 d-flex align-items-center d-lg-none d-md-none d-block">
-                <!-- <div class="d-flex align-items-center me-lg-4 me-2 pointer position-relative">
-                    <i class="bx bxs-bell text-white fs-4"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        9+
-                        <span class="visually-hidden">unread notification</span>
-                    </span>
-                </div> -->
                 <div class="align-items-center me-2 pointer position-relative" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="bx bx-menu fs-4"></i>

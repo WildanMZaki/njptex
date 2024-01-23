@@ -4,12 +4,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.bg-edark {
-    background-color: #1b1e23;
+.bg-main {
+    background-color: #1c71ad !important;
 }
 
-.text-edark {
-    color: #1b1e23;
+.text-main {
+    color: #1c71ad !important;
 }
 
 .pointer {
@@ -28,6 +28,31 @@
 
 .highlight {
     color: #1c71ad;
+}
+.offcanvas {
+    transition: transform 0.3s ease-in-out;
+}
+.ease-transition {
+    transition: all 0.5s ease;
+}
+#products-options {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+#products-options:hover {
+    opacity: 1;
+    display: block;
+}
+.nav-item.show-products:hover #products-options {
+    opacity: 1;
+    display: block;
+}
+.product-option:hover {
+    transform: translateX(-5px);
+}
+.product-option:hover a {
+    color: #1c71ad !important;
 }
 
 .is-url {

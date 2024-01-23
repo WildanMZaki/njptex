@@ -47,17 +47,47 @@
                 <ul class="d-flex list-unstyled ms-auto text-dark justify-content-around m-0">
                     <li class="nav-item">
                         <a class="nav-link text-dark nav-link-header" aria-current="page" href="../">
-                            <p
-                                class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
-                                <i class="ti ti-home me-1"></i> <span>Home</span></p>
+                            <p class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
+                                <i class="ti ti-home me-1"></i> <span>Home</span>
+                            </p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-dark nav-link-header" href="#">
-                            <p
-                                class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
-                                <i class="ti ti-shirt me-1"></i> Produk</p>
+                    <li class="nav-item position-relative show-products">
+                        <a class="nav-link active text-dark nav-link-header" href="javascript:void(0)">
+                            <p class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center">
+                                <i class="ti ti-shirt me-1"></i> Produk
+                            </p>
                         </a>
+                        <div class="position-absolute" style="z-index: 300;" id="products-options">
+                            <div class="card">
+                                <div class="card-body px-5">
+                                    <h5 class="m-0 p-0 mb-3 text-nowrap">Our Products</h5>
+                                    <hr class="m-0 pb-1">
+                                    <ul class="list-unstyled">
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="#" class="my-2 text-decoration-none text-dark">
+                                                Hoodie
+                                            </a>
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="#" class="my-2 text-decoration-none text-dark">
+                                                T-Shirt
+                                            </a>
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="#" class="my-2 text-decoration-none text-dark">
+                                                Longsleeve
+                                            </a>
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="#" class="my-2 text-decoration-none text-dark">
+                                                Outdoor
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark nav-link-header" href="../about/">
@@ -76,13 +106,6 @@
                 </ul>
             </nav>
             <div class="me-2 d-flex align-items-center d-lg-none d-md-none d-block">
-                <!-- <div class="d-flex align-items-center me-lg-4 me-2 pointer position-relative">
-                    <i class="bx bxs-bell text-white fs-4"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        9+
-                        <span class="visually-hidden">unread notification</span>
-                    </span>
-                </div> -->
                 <div class="align-items-center me-2 pointer position-relative" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="bx bx-menu fs-4"></i>
@@ -92,6 +115,8 @@
     </header>
 
     <main>
+        <h3 class="text-center my-3">Hoodie</h3>
+
 
     </main>
 
@@ -139,7 +164,7 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
                             <div class="d-flex">
-                                <img src="./assets/images/logo.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top me-2">
+                                <img src="../assets/images/logo.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top me-2">
                                 <h4 class="w-100">About Njptex</h4>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 

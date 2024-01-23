@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,11 +24,6 @@
 
     <link rel="stylesheet" href="./common.css">
     <link rel="stylesheet" href="./assets/css/products.css">
-    <style>
-        .offcanvas {
-            transition: transform 0.3s ease-in-out;
-        }
-    </style>
     
 </head>
 <body>
@@ -46,10 +41,40 @@
                             <p class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center"><i class="ti ti-home me-1"></i> <span>Home</span></p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark nav-link-header" href="./products/">
+                    <li class="nav-item position-relative show-products">
+                        <a class="nav-link text-dark nav-link-header" href="javascript:void(0)">
                             <p class="m-0 p-2 d-block d-md-flex flex-lg-row flex-md-column justify-content-md-center mx-md-2 align-items-md-center"><i class="ti ti-shirt me-1"></i> Produk</p>
                         </a>
+                        <div class="position-absolute" style="z-index: 300;" id="products-options">
+                            <div class="card">
+                                <div class="card-body px-5">
+                                    <h5 class="m-0 p-0 mb-3 text-nowrap">Our Products</h5>
+                                    <hr class="m-0 pb-1">
+                                    <ul class="list-unstyled">
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="./products/" class="my-2 text-decoration-none text-dark">
+                                                Hoodie
+                                            </a>    
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="./products/" class="my-2 text-decoration-none text-dark">
+                                                T-Shirt
+                                            </a>    
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="./products/" class="my-2 text-decoration-none text-dark">
+                                                Longsleeve
+                                            </a>    
+                                        </li>
+                                        <li class="pointer product-option py-2 ease-transition">
+                                            <a href="./products/" class="my-2 text-decoration-none text-dark">
+                                                Outdoor
+                                            </a>    
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark nav-link-header" href="./about/">
@@ -63,14 +88,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="me-2 d-flex align-items-center d-lg-none d-md-none d-block">
-                <!-- <div class="d-flex align-items-center me-lg-4 me-2 pointer position-relative">
-                    <i class="bx bxs-bell text-white fs-4"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        9+
-                        <span class="visually-hidden">unread notification</span>
-                    </span>
-                </div> -->
+            <div class="me-2 d-flex align-items-center d-lg-none d-md-none d-block">                
                 <div class="align-items-center me-2 pointer position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="bx bx-menu fs-4"></i>                    
                 </div>
@@ -179,8 +197,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
                         </div>
                     </div>
-                </div>
-                
+                </div>                
             </div>
         </section>
 
@@ -388,7 +405,10 @@
                 </div>
             </div>
             <div class="row">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3954244528913!2d107.54259517035082!3d-6.962593352757964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68efa9e6275357%3A0x8b947ff54634055f!2sNJ%20PROJECT%20CONVECTION!5e0!3m2!1sid!2sid!4v1704939246460!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3954244528913!2d107.54259517035082!3d-6.962593352757964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68efa9e6275357%3A0x8b947ff54634055f!2sNJ%20PROJECT%20CONVECTION!5e0!3m2!1sid!2sid!4v1704939246460!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>        
         <!-- End Location Section -->
@@ -483,7 +503,7 @@
 
     <!-- Start copyright  -->
     <div class="footer-copyright">
-        <p class="footer-company text-primary">All Rights Reserved. &copy; 2024 ~ <a href="https://vetencode.com" class="text-info">Vetencode</a>
+        <p class="footer-company text-primary">All Rights Reserved. &copy; 2024 ~ <a href="https://vetencode.com">Vetencode</a>
     </div>
     <!-- End copyright  -->
 
